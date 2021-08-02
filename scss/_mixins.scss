@@ -1,0 +1,30 @@
+@mixin d-flex ($display, $direction, $justify, $align) {
+    display: $display;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin bgstyle ($image, $size, $repeat, $width) {
+    background-image: $image;
+    background-size: $size;
+    background-repeat: $repeat;
+    width: $width;
+}
+
+@mixin text ($color, $size, $weight, $width) {
+    color: $color;
+    font-size: $size;
+    font-weight: $weight;
+    width: $width;    
+}
+
+@mixin margin ($top, $bottom) {
+    margin-top: $top;
+    margin-bottom: $bottom;
+}
+
+@mixin transition ($property, $duration, $type) {
+    transition: $property $duration $type;
+}
+

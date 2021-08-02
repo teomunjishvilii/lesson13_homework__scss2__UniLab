@@ -1,0 +1,108 @@
+body {
+    background-color: $color01;
+
+    .section1 {
+        @include bgstyle (url(../images/background-image.jpeg), cover, no-repeat, $size01);
+        @include d-flex (flex, column, center, center);
+        height: $size03;
+        border-radius: $size02 $size02 $size04 $size04;
+        text-align: center;
+
+        h1 {
+            @include text ($color02, $size05, $size25, $size06);
+        }
+
+        p {
+            @include text ($color02, $size07, $size15, $size08);
+            @include margin ($size10, $size11);
+            line-height: $size09;
+        }
+
+        button {
+            @include text ($color02, $size07, 500, $size04);
+            @include transition (all, 0.2s, linear);
+            line-height: $size09;
+            border-radius: $size12;
+            background-color: $color03;
+            padding: $size13 $size14;
+            border: none;
+
+            &:hover {
+                color: $color03;
+                background-color: $color02;
+                border: 4px solid $color03;
+            }
+        }
+    }
+
+    .section2 {
+        @include d-flex (flex, column, center, center);
+        @include margin ($size16, $size16);
+        height: $size15;
+
+        h3 {
+            @include text ($color04, $size14, bold, $size27);
+            text-align: center;
+            margin-top: $size14;
+        }
+    }
+
+    .container {
+        @extend %size-container;
+    }
+
+    .section3 {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: $size26;
+
+        .block {
+            background-color: $color02;
+            width: $size18;
+            height: $size19;
+            border-radius: $size12;
+            padding: $size10;
+            @include d-flex (flex, column, center, center);
+            text-align: center;
+            @include transition (all, 0.2s, linear);
+
+            &:nth-child(odd) {
+                &:hover {
+                    border: 3px solid $color03;
+                }
+            }
+
+            &:nth-child(even) {
+                &:hover {
+                    border: 3px solid $color04;
+                }
+            }
+
+
+            img {
+                width: $size20;
+                height: $size20;
+            }
+
+            h4 {
+                @include text ($color04, $size21, $size25, $size25);
+                @include margin ($size22, $size22);
+                line-height: $size09;
+
+                &:after {
+                    content: ' ';
+                    width: 50px;
+                    height: 3px;
+                    background-color: $color03;
+                    display: block;
+                    margin: 5px 40px;
+                }
+            }
+
+            p {
+                @include text ($color04, $size23, $size25, $size18);
+                line-height: $size24;
+            }
+        }
+    }
+}
