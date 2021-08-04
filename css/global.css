@@ -152,8 +152,8 @@ body .section3 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-bottom: 100px;
   margin: 0 auto;
+  margin-bottom: 100px;
 }
 
 body .section3 .block {
