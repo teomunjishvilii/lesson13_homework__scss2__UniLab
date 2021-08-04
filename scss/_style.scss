@@ -9,17 +9,17 @@ body {
         text-align: center;
 
         h1 {
-            @include text ($color02, $size05, $size25, $size06);
+            @include text ($color02, $size05, $size25, $size06, $size01);
         }
 
         p {
-            @include text ($color02, $size07, $size15, $size08);
+            @include text ($color02, $size07, $size15, $size08, $size01);
             @include margin ($size10, $size11);
             line-height: $size09;
         }
 
         button {
-            @include text ($color02, $size07, 500, $size04);
+            @include text ($color02, $size07, 500, $size04, $size01);
             @include transition (all, 0.2s, linear);
             line-height: $size09;
             border-radius: $size12;
@@ -41,7 +41,7 @@ body {
         height: $size15;
 
         h3 {
-            @include text ($color04, $size14, bold, $size27);
+            @include text ($color04, $size14, bold, $size27, $size01);
             text-align: center;
             margin-top: $size14;
         }
@@ -55,6 +55,7 @@ body {
         display: flex;
         justify-content: space-between;
         margin-bottom: $size26;
+        margin: 0 auto;
 
         .block {
             background-color: $color02;
@@ -85,7 +86,7 @@ body {
             }
 
             h4 {
-                @include text ($color04, $size21, $size25, $size25);
+                @include text ($color04, $size21, $size25, $size25, $size01);
                 @include margin ($size22, $size22);
                 line-height: $size09;
 
@@ -95,12 +96,12 @@ body {
                     height: 3px;
                     background-color: $color03;
                     display: block;
-                    margin: 5px 40px;
+                    margin: 5px 90px;
                 }
             }
 
             p {
-                @include text ($color04, $size23, $size25, $size18);
+                @include text ($color04, $size29, $size25, $size18, $size01);
                 line-height: $size24;
             }
         }
